@@ -8,6 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder ".", "/vagrant"
   config.vm.define :ubuntu do |host|
     host.vm.box = "bento/ubuntu-18.04"
+    
     host.vm.hostname = "ubuntu"
     config.vm.network "private_network", ip: "169.254.46.99", name: "VirtualBox Host-Only Ethernet Adapter"
 
